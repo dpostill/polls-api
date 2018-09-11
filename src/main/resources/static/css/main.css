@@ -1,0 +1,7 @@
+ul {
+  list-style: none;
+}
+
+.result_table tr td:first-child {
+    width: 80%;
+}
