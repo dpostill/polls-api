@@ -22,7 +22,7 @@ public class Question {
 
 	private Date publishedAt;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "question")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "question")
 	private List<Choice> choices;
 
 	public long getId() {
