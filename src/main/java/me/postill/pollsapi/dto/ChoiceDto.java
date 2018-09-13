@@ -2,7 +2,11 @@ package me.postill.pollsapi.dto;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({ "choice", "votes" })
 public class ChoiceDto {
+	
 	@NotEmpty
 	private String choice;
 	private Integer votes;

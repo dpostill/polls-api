@@ -7,7 +7,9 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+@JsonPropertyOrder({ "question", "choices" })
 public class PollQuestionDto {
 	
 	@JsonIgnore
