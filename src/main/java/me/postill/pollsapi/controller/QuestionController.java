@@ -23,14 +23,14 @@ public class QuestionController {
 	@Autowired
 	private PollService pollService;
 
-	@GetMapping("/questions")
+	@GetMapping(value="/questions", produces="application/json")
 	public ResponseEntity<List<PollResultDto>> getQuestions() {
 		final List<PollResultDto> pollResults = pollService.getPollResults();
 
 		return ResponseEntity.ok(pollResults);
 	}
 
-	@PostMapping("/questions")
+	@PostMapping(value="/questions", produces="application/json")
 	public ResponseEntity<PollResultDto> createQuestion(
 			@Valid @RequestBody final PollQuestionDto createQuestionDto,
 			final UriComponentsBuilder uriComponentsBuilder) {
